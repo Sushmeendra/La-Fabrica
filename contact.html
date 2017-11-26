@@ -1,0 +1,162 @@
+ <html>
+<title>Contact</title>
+<head>
+	<style>
+span.header{
+font-size:40px;
+font-family:Garamond;
+}
+
+div.common{
+color:white;
+background-color:red;position:fixed;width:1400px;
+}
+
+a{
+color:black;text-decoration:none;
+
+}
+
+div.block{
+	height:300px;
+	position: relative;	
+	background-color: lightgrey;
+}
+div.head1{
+	position:relative;
+	background-color: yellow;
+	top:60px;
+	left:1px;
+	font-size: 50px;
+}
+span{
+	position:fixed;
+	left:1000px;
+}
+
+</style>
+<body>
+
+
+<script>
+var f1=0;
+var f2=0;
+var f3=0;
+var f4=0;
+var f5=0;
+var f6=0;
+function func()
+{
+	if(f1<1){
+	var n=document.createElement("div");
+	n.innerHTML="Phone number:9999999999";
+	n.style.backgroundColor="orange";
+	n.style.color="white";
+	n.style.width="500px";
+	var b=document.getElementById("st");
+	var x=document.querySelector(".block");
+	x.insertBefore(n,b);
+	f1=1;}
+}
+function func1()
+{
+	if(f2<1){
+	var n=document.createElement("div");
+	n.innerHTML="Phone number:9999999999";
+	n.style.backgroundColor="lightgray";
+	n.style.color="white";
+	n.style.width="500px";
+	var b=document.getElementById("st1");
+	var x=document.querySelector(".block");
+	x.insertBefore(n,b);
+	f2=1;}
+}
+function func2()
+{
+	if(f3<1){
+	var n=document.createElement("div");
+	n.innerHTML="Phone number:9999999999";
+	n.style.backgroundColor="orange";
+	n.style.color="white";
+	n.style.width="500px";
+	var b=document.getElementById("st2");
+	var x=document.querySelector(".block");
+	x.insertBefore(n,b);
+	f3=1;}
+}
+function func3()
+{
+	if(f4<1){
+	var n=document.createElement("div");
+	n.innerHTML="Phone number:9999999999";
+	n.style.backgroundColor="lightgray";
+	n.style.color="white ";
+	n.style.width="500px";
+	var b=document.getElementById("st3");
+	var x=document.querySelector(".block");
+	x.insertBefore(n,b);
+	f4=1;}
+}
+function func4()
+{
+	if(f5<1){
+	var n=document.createElement("div");
+	n.innerHTML="Phone number:9999999999";
+	n.style.backgroundColor="red";
+	n.style.color="white";
+	n.style.width="500px";
+	var b=document.getElementById("st4");
+	var x=document.querySelector(".block");
+	x.insertBefore(n,b);
+	f5=1;}
+}
+
+</script>
+
+
+
+
+
+
+
+	
+<div class="common">
+
+<a href="about.html"><img src="rm.png"></a>
+
+<span class="header"><center>La-Fabrica</center></span>
+
+<table cellspacing=20px>
+
+<tr>
+
+	<th><a href="about.html">HOME</a></th>
+
+<th id="the_club">THE CLUB</th>
+<th id="members">MEMBERS</th>
+	<th><a href="fans.html">FAN CLUB</a></th>
+	<th><a href="anthem.html">ANTHEM</a></th>
+	
+
+</tr>
+
+</table>
+
+</div><br/><br/><br/><br/><br/>
+
+<div class="head1">
+<p><b>Contact</b></p><br>
+</div>
+
+<div class="block">
+LA-MASIA <span class="indent" onclick="func()"> view</span><br/><hr id="st"><br/>
+CUSTOMER SERVICE <span class="indent" onclick="func1()"> view</span></br><hr id="st1"><br/>
+HELP DESK FOR CLUB MEMBERS <span class="indent" onclick="func2()"> view</span></br><hr id="st2"><br/>
+PRESS <span class="indent" onclick="func3()"> view</span></br><hr id="st3"><br/>
+TICKET SALES <span class="indent" onclick="func4()"> view</span></br><hr id="st4">
+</div>
+
+<br/><br/><br/><br><br><br><br><br><br><br><br>
+<center><img src="new.jpg" height=100px width=280px;></center>
+</body>
+<html>

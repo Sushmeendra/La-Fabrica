@@ -1,0 +1,201 @@
+<html>
+
+<title>La Fabrica</title>
+
+<style>
+
+body{
+background-color:white;}
+
+span.header{
+font-size:40px;
+font-family:Garamond;
+}
+.input{
+height:20px;
+}
+div.common{
+color:white;
+background-color:red;position:relative;width:1300px;
+}
+
+a{
+color:black;text-decoration:none;
+
+}
+
+select{
+color:black;
+font-family:Garamond;
+background-color:red;
+}
+div.register{
+background-image:url("1.jpg");position:relative;width:1300px;height:600px;top:0;bottom:100;
+
+}
+form{
+position:absolute; top:100px; left:500px;height:30px;
+}
+h1{
+position:absolute;left:475px;
+color:white; 
+}
+
+</style>
+
+
+<body>
+
+<div class="common" z-index=1>
+
+<a href="about.html"><img src="rm.png"></a>	
+
+<span class="header"><center>La-Fabrica</center></span>
+
+<table cellspacing=20px>
+
+<tr>
+	
+	<th><a href="about.html">HOME</a></th>
+
+<th id="the_club">THE CLUB</th>
+<th id="members">MEMBERS</th>
+	<th><a href="fans.html">FAN CLUB</a></th>
+	<th><a href="anthem.html">ANTHEM</a></th>
+	
+
+</table>
+
+</div>
+
+<script>
+	flag1=1;
+	flagd1=1;
+	
+	var d=document.getElementById("the_club");
+	d.addEventListener("mouseover",tab1,false);
+	d.addEventListener("mouseout",del1,false);
+	d.addEventListener("click",tabp,false);
+	
+	function tabp()
+	{
+		tab1();
+		flagd1=0;
+	}
+	function tab1()
+	{
+		if(flag1)
+		{
+		var n=document.createElement("div");
+		n.innerHTML="<br/><a href=\"signup.html\">SIGNUP</a><br><hr><br><a href=\"squad.html\">THE SQUAD</a><br/><hr><br/><a href=\"contact.html\">CONTACTS</a><br/><hr><br/><a href=\"h1.html\">HISTORY</a>";
+		n.style.position="absolute";
+		n.style.top="135";
+		n.style.left="100";
+		n.style.backgroundColor="red";
+		n.setAttribute("id","tab1");
+		var l=document.querySelector("div.common");
+		if(l.nextSilbling)
+		{
+			var h=l.nextSibling;
+			l.parentNode.insertBefore(n,h);
+		}
+		else
+		{
+			l.parentNode.appendChild(n);
+		}
+		flag1--;
+		flagd1=1;
+	}
+	}
+	function del1()
+	{
+		if(flagd1)
+		{
+			flagsd1=0;
+			var d=document.getElementById("tab1");
+			d.parentNode.removeChild(d);
+			flag1=1;
+		}
+	}
+	flag2=1;
+	flag2d=1;
+	var e=document.getElementById("members");
+	e.addEventListener("mouseover",tab2,false);
+	e.addEventListener("mouseout",del2,false);
+	e.addEventListener("click",tab2p,false);
+	function tab2p()
+	{
+		tab2();
+		flagd2=0;
+
+	}
+	function tab2()
+	{
+		if(flag2)
+		{
+		var n=document.createElement("div");
+		n.innerHTML="<br/><a href=\"members.html\">MEMBER SERVICES</a><br/><hr><br/><a href=\"news.html\">NEWS</a></br><hr></br><a href=\"reg.html\">REGULATIONS</a>";
+		n.style.position="absolute";
+		n.style.top="135";
+		n.style.left="205";
+		n.style.backgroundColor="red";
+		n.setAttribute("id","tab2");
+		var l=document.querySelector("div.common");
+		if(l.nextSilbling)
+		{
+			var h=l.nextSibling;
+			l.parentNode.insertBefore(n,h);
+		}
+		else
+		{
+			l.parentNode.appendChild(n);
+		}
+		flag2--;
+		flagd2=1;
+	}
+	}
+	function del2()
+	{
+		if(flagd2)
+		{
+			flagsd2=0;
+			var d=document.getElementById("tab2");
+			d.parentNode.removeChild(d);
+			flag2=1;
+		}
+	}
+
+
+</script>
+
+<p id="cookie"></p>
+
+<div class="register" z-index=0>
+<!--<img src="1.jpg" width="1300" height="600">-->
+<h1>Sign Up NOW!!!</h1>
+
+
+<form action="cookies.php" method="post">
+
+	<input type="text" placeholder="First Name" name="firstName"></input></br></br>
+	<input type="text" placeholder="Last Name" name="lastName"></input></br></br>
+	<input type="email" placeholder="example123@gmail.com" name="email"></input></br></br>
+	<input type="textarea" placeholder="Address" name="address"></input></br></br>
+	<input type="text" placeholder="Phone Number" name="number"></input></br></br>
+	<input type="text" placeholder="Date Of Birth-dd/mm/yy" name="dob"></input>
+<br>
+<br>
+
+
+<input type="submit">
+
+
+</form>
+
+
+
+
+</div>
+</body>
+
+</html>

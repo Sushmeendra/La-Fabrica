@@ -1,0 +1,190 @@
+<html>
+
+<title>LA MASIA FOOTBALL ACADEMY</title>
+
+<style>
+
+body{
+background-color:white;}
+
+span.header{
+font-size:40px;
+font-family:Garamond;
+}
+
+div.common{
+color:white;
+background-color:red;position:fixed;width:1400px;
+}
+
+a{
+color:black;text-decoration:none;
+
+}
+
+select{
+color:black;
+font-family:Garamond;
+background-color:red;
+}
+
+.r
+{
+	font-size: 30px;
+	color:blue;
+	background-color:yellow;
+}
+
+</style>
+
+
+<body>
+
+<div class="common">
+
+<a href="about.html"><img src="rm.png"></a>
+
+<span class="header"><center>La-Fabrica</center></span>
+
+<table cellspacing=20px>
+
+<tr>
+
+	<th><a href="about.html">HOME</a></th>
+
+<th id="the_club">THE CLUB</th>
+<th id="members">MEMBERS</th>
+	<th><a href="fans.html">FAN CLUB</a></th>
+	<th><a href="anthem.html">ANTHEM</a></th>
+	<th><a href="register.html">REGISTER</a></th>
+
+</tr>
+
+</table>
+
+</div>
+
+
+<script>
+	flag1=1;
+	flagd1=1;
+	
+	var d=document.getElementById("the_club");
+	d.addEventListener("mouseover",tab1,false);
+	d.addEventListener("mouseout",del1,false);
+	d.addEventListener("click",tabp,false);
+	
+	function tabp()
+	{
+		tab1();
+		flagd1=0;
+	}
+	function tab1()
+	{
+		if(flag1)
+		{
+		var n=document.createElement("div");
+		n.innerHTML="<br/><a href=\"signup.html\">SIGNUP</a><br><hr><br><a href=\"squad.html\">THE SQUAD</a><br/><hr><br/><a href=\"contact.html\">CONTACTS</a><br/><hr><br/><a href=\"h1.html\">HISTORY</a>";
+		n.style.position="absolute";
+		n.style.top="135";
+		n.style.left="100";
+		n.style.backgroundColor="red";
+		n.setAttribute("id","tab1");
+		var l=document.querySelector("div.common");
+		if(l.nextSilbling)
+		{
+			var h=l.nextSibling;
+			l.parentNode.insertBefore(n,h);
+		}
+		else
+		{
+			l.parentNode.appendChild(n);
+		}
+		flag1--;
+		flagd1=1;
+	}
+	}
+	function del1()
+	{
+		if(flagd1)
+		{
+			flagsd1=0;
+			var d=document.getElementById("tab1");
+			d.parentNode.removeChild(d);
+			flag1=1;
+		}
+	}
+	flag2=1;
+	flag2d=1;
+	var e=document.getElementById("members");
+	e.addEventListener("mouseover",tab2,false);
+	e.addEventListener("mouseout",del2,false);
+	e.addEventListener("click",tab2p,false);
+	function tab2p()
+	{
+		tab2();
+		flagd2=0;
+
+	}
+	function tab2()
+	{
+		if(flag2)
+		{
+		var n=document.createElement("div");
+		n.innerHTML="<br/><a href=\"members.html\">MEMBER SERVICES</a><br/><hr><br/><a href=\"news.html\">NEWS</a></br><hr></br><a href=\"reg.html\">REGULATIONS</a>";
+		n.style.position="absolute";
+		n.style.top="135";
+		n.style.left="205";
+		n.style.backgroundColor="red";
+		n.setAttribute("id","tab2");
+		var l=document.querySelector("div.common");
+		if(l.nextSilbling)
+		{
+			var h=l.nextSibling;
+			l.parentNode.insertBefore(n,h);
+		}
+		else
+		{
+			l.parentNode.appendChild(n);
+		}
+		flag2--;
+		flagd2=1;
+	}
+	}
+	function del2()
+	{
+		if(flagd2)
+		{
+			flagsd2=0;
+			var d=document.getElementById("tab2");
+			d.parentNode.removeChild(d);
+			flag2=1;
+		}
+	}
+</script>
+
+
+
+
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+<table class="r">
+	<tr>
+		<td>
+			Ramos is a Club Legend.Captaining Madrid for 10 years running, he's a formidable force on and off the 	pitch, striking 
+			fear into attackers and defenders alike.
+			his versatility on the wing and ability to make creative plays possible is his strength.
+			He can pick out a pass from 60 yards out- to a T -all while scanning the field around him for space.
+			He usually opts for quick, fast play on the wing to exploit momentary free pace created and hence 		advance deeper into the attacking third.
+			That, coupled with defence-splitting dribbling prowess, a sledgehammer of a left foot, and an uncanny 	ability to mark and consequently hack down opposition wingers makes him the king of the position.
+		</td>
+	</tr>
+</table>
+<br>
+<center><img src="varane.gif" width></center>
+
+</body>
+
+</html>

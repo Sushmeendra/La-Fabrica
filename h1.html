@@ -1,0 +1,256 @@
+<html>
+
+<title>LA FABRICA FOOTBALL ACADEMY</title>
+
+<style>
+
+body{
+background-color:white;
+}
+
+span.header{
+font-size:40px;
+font-family:Garamond;
+}
+
+.main
+{
+	font-size: 50px;
+}
+
+div.common{
+color:white;
+background-color:red;position:fixed;width:1400px;
+}
+
+a{
+color:black;text-decoration:none;
+
+}
+#p1
+{
+	color:white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#p2
+{
+	color:yellow;
+	font-size: 20px;
+	font-weight: bold;
+}
+u
+{
+	color: orange;	 
+	font-family: Garamond;
+}
+
+#d2{
+	position:absolute;
+	top:550;
+	background-color: red;
+}
+
+#bod
+{
+	background-image: url(1.jpg);
+
+}
+
+select{
+color:black;
+font-family:Garamond;
+background-color:red;
+}
+
+</style>
+
+
+<body id="bod">
+
+<div class="common" onload = "Hits()">
+
+
+<a href="about.html"><img src="rm.png"></a>
+
+<span class="header"><center>La-Fabrica</center></span>
+
+<table cellspacing=20px>
+
+<tr>
+
+	<th><a href="about.html">HOME</a></th>
+
+<th id="the_club">THE CLUB</th>
+<th id="members">MEMBERS</th>
+<th>FAN CLUB</th>
+<th><a href="anthem.html">ANTHEM</a></th></tr>
+</tr>
+
+</table>
+
+</div>
+<script>
+	flag1=1;
+	flagd1=1;
+	
+	var d=document.getElementById("the_club");
+	d.addEventListener("mouseover",tab1,false);
+	d.addEventListener("mouseout",del1,false);
+	d.addEventListener("click",tabp,false);
+	
+	function tabp()
+	{
+		tab1();
+		flagd1=0;
+	}
+	function tab1()
+	{
+		if(flag1)
+		{
+		var n=document.createElement("div");
+		n.innerHTML="<br/><a href=\"signup.html\">SIGNUP</a><br><hr><br><a href=\"squad.html\">THE SQUAD</a><br/><hr><br/><a href=\"contact.html\">CONTACTS</a><br/><hr><br/><a href=\"h1.html\">HISTORY</a>";
+		n.style.position="absolute";
+		n.style.top="135";
+		n.style.left="100";
+		n.style.backgroundColor="red";
+		n.setAttribute("id","tab1");
+		var l=document.querySelector("div.common");
+		if(l.nextSilbling)
+		{
+			var h=l.nextSibling;
+			l.parentNode.insertBefore(n,h);
+		}
+		else
+		{
+			l.parentNode.appendChild(n);
+		}
+		flag1--;
+		flagd1=1;
+	}
+	}
+	function del1()
+	{
+		if(flagd1)
+		{
+			flagsd1=0;
+			var d=document.getElementById("tab1");
+			d.parentNode.removeChild(d);
+			flag1=1;
+		}
+	}
+	flag2=1;
+	flag2d=1;
+	var e=document.getElementById("members");
+	e.addEventListener("mouseover",tab2,false);
+	e.addEventListener("mouseout",del2,false);
+	e.addEventListener("click",tab2p,false);
+	function tab2p()
+	{
+		tab2();
+		flagd2=0;
+
+	}
+	function tab2()
+	{
+		if(flag2)
+		{
+		var n=document.createElement("div");
+		n.innerHTML="<br/><a href=\"members.html\">MEMBER SERVICES</a><br/><hr><br/><a href=\"news.html\">NEWS</a></br><hr></br><a href=\"reg.html\">REGULATIONS</a>";
+		n.style.position="absolute";
+		n.style.top="135";
+		n.style.left="205";
+		n.style.backgroundColor="red";
+		n.setAttribute("id","tab2");
+		var l=document.querySelector("div.common");
+		if(l.nextSilbling)
+		{
+			var h=l.nextSibling;
+			l.parentNode.insertBefore(n,h);
+		}
+		else
+		{
+			l.parentNode.appendChild(n);
+		}
+		flag2--;
+		flagd2=1;
+	}
+	}
+	function del2()
+	{
+		if(flagd2)
+		{
+			flagsd2=0;
+			var d=document.getElementById("tab2");
+			d.parentNode.removeChild(d);
+			flag2=1;
+		}
+	}
+</script>
+
+
+<br>
+<br><br><br><br><br><br><br>
+<p id="p1">The Santiago Bernabeu Stadium is the home stadium of Real Madrid since its completion in 1947, with a current seating capacity of 81,044
+Santiago Bernabeu is one of the world's most famous and prestigious football venues. It has hosted the European Cup/Champions League final on four occasions: in 1957, 1969, 1980 and 2010. The final matches for the 1964 European Nations' Cup and the 1982 FIFA World Cup, were also held at the Bernabeu, thus making it the first stadium in Europe to host both a UEFA European Championship and a FIFA World Cup final.</p>
+
+<p id="p2">On 22 June 1944, the Banco Mercantil e Industrial bank granted a credit to Santiago Bernabeu and Rafael Salgado for the purchase of the land adjacent to the old Ramin Amin. On 5 September 1944, architects Manuel Munoz Monasterio and Luis Alemany Soler were hired and the structure on the site began to give way to the new stadium. On 27 October 1944, construction work on the stadium began.</p>
+</div>
+
+<br>
+
+<div id="d2">
+<marquee><p style="color:yellow;">Welcome to La Fabrica Football Club......Hurry sign up now!!!You can find the registration link under "The Club"!! The subscription for the first month is absolutely free!!! Sign Up now and win Real Madrid Accessories!!!</p></marquee>
+</div>
+
+
+
+
+<br>
+
+<script type="text/javascript">
+
+	//function that(should) update number of page hits
+	var hits = 0;
+	function Hits()
+	{
+		++hits;
+		document.getElementById("hits").innerHTML = hits;
+	}
+
+	//function that shows how much time(in seconds) spent on page
+	var seconds = 0;
+
+    function startTimer() 
+    {         
+    	window.setInterval( "updateTime()", 1000);   
+    } 
+    function updateTime()
+    {
+        ++seconds;                
+        document.getElementById("soFar").innerHTML = seconds;
+    } 
+
+
+    //function that (should) display todays date
+    
+
+</script>
+
+
+
+
+
+
+
+<br><br>
+
+<br><br><br><br><br><br>
+
+
+
+
+</body>
+
+</html>

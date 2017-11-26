@@ -1,0 +1,270 @@
+<html>
+
+<title>LA FABRICA FOOTBALL ACADEMY</title>
+
+<style>
+
+body{
+background-color:white;}
+
+span.header{
+font-size:40px;
+font-family:Garamond;
+}
+
+.main
+{
+	font-size: 50px;
+}
+
+div.common{
+color:white;
+background-color:red;position:fixed;width:1400px;
+}
+
+.ramos
+{
+	font-family: Oswald, sans-serif;
+}
+
+
+.squad
+{
+	background-color: lightgray;
+	height:90px;
+	font-size: 40px;
+}
+
+a{
+color:black;text-decoration:none;
+
+}
+
+u
+{
+	color: orange;	 
+	font-family: Garamond;
+}
+
+
+select{
+color:black;
+font-family:Garamond;
+background-color:red;
+}
+
+</style>
+
+
+<body onload="startTimer()">
+
+<div class="common" onload = "Hits()">
+
+
+<a href="about.html"><img src="rm.png"></a>
+
+<span class="header"><center>La-Fabrica</center></span>
+
+<table cellspacing=20px>
+
+<tr>
+
+	<th><a href="about.html">HOME</a></th>
+
+<th id="the_club">THE CLUB</th>
+<th id="members">MEMBERS</th>
+<th>FAN CLUB</th>
+<th>ANTHEM</th></tr>
+</tr>
+
+</table>
+
+</div>
+
+<script>
+	flag1=1;
+	flagd1=1;
+	
+	var d=document.getElementById("the_club");
+	d.addEventListener("mouseover",tab1,false);
+	d.addEventListener("mouseout",del1,false);
+	d.addEventListener("click",tabp,false);
+	
+	function tabp()
+	{
+		tab1();
+		flagd1=0;
+	}
+	function tab1()
+	{
+		if(flag1)
+		{
+		var n=document.createElement("div");
+		n.innerHTML="<br/><a href=\"signup.html\">SIGNUP</a><br><hr><br><a href=\"squad.html\">THE SQUAD</a><br/><hr><br/><a href=\"contact.html\">CONTACTS</a><br/><hr><br/><a href=\"h1.html\">HISTORY</a>";
+		n.style.position="absolute";
+		n.style.top="135";
+		n.style.left="100";
+		n.style.backgroundColor="red";
+		n.setAttribute("id","tab1");
+		var l=document.querySelector("div.common");
+		if(l.nextSilbling)
+		{
+			var h=l.nextSibling;
+			l.parentNode.insertBefore(n,h);
+		}
+		else
+		{
+			l.parentNode.appendChild(n);
+		}
+		flag1--;
+		flagd1=1;
+	}
+	}
+	function del1()
+	{
+		if(flagd1)
+		{
+			flagsd1=0;
+			var d=document.getElementById("tab1");
+			d.parentNode.removeChild(d);
+			flag1=1;
+		}
+	}
+	flag2=1;
+	flag2d=1;
+	var e=document.getElementById("members");
+	e.addEventListener("mouseover",tab2,false);
+	e.addEventListener("mouseout",del2,false);
+	e.addEventListener("click",tab2p,false);
+	function tab2p()
+	{
+		tab2();
+		flagd2=0;
+
+	}
+	function tab2()
+	{
+		if(flag2)
+		{
+		var n=document.createElement("div");
+		n.innerHTML="<br/><a href=\"members.html\">MEMBER SERVICES</a><br/><hr><br/><a href=\"news.html\">NEWS</a></br><hr></br><a href=\"reg.html\">REGULATIONS</a>";
+		n.style.position="absolute";
+		n.style.top="135";
+		n.style.left="205";
+		n.style.backgroundColor="red";
+		n.setAttribute("id","tab2");
+		var l=document.querySelector("div.common");
+		if(l.nextSilbling)
+		{
+			var h=l.nextSibling;
+			l.parentNode.insertBefore(n,h);
+		}
+		else
+		{
+			l.parentNode.appendChild(n);
+		}
+		flag2--;
+		flagd2=1;
+	}
+	}
+	function del2()
+	{
+		if(flagd2)
+		{
+			flagsd2=0;
+			var d=document.getElementById("tab2");
+			d.parentNode.removeChild(d);
+			flag2=1;
+		}
+	}
+</script>
+
+
+<br>
+<br><br><br><br><br><br><br>
+
+<br>
+
+<br><br><br>
+
+<div class="squad">
+The Squad
+</div>
+
+<br>
+<h3>Players</h3>
+
+
+<table cellspacing="30px">
+<tr>	
+
+<td>
+<img src="Ramos.jpg"><br><p class ="ramos"> <span style="font-size: 35">4</span> &nbspSERGIO RAMOS
+
+<br> 
+
+</td>
+
+<td>
+<img src="squad9.jpg"><br><p class ="ramos"> <span style="font-size: 35">12</span> &nbspMARCELO VIERA</p>
+</td>
+
+<td>
+<img src="squad4.jpg"><br><p class ="ramos"> <span style="font-size: 35">2</span> &nbspDANI CARVAJAL</p>
+</td>
+
+<td>
+<img src="squad7.jpg"><br><p class ="ramos"> <span style="font-size: 35">5</span> &nbspRAPHAEL VARANE</p>
+</td> 
+
+</tr>
+
+<tr>
+	
+	<td>
+<img src="squad1.jpg"><br><p class ="ramos"> <span style="font-size: 35">1</span> &nbspKEYLOR NAVAS</p>
+</td>
+<td>
+<img src="squad12.jpg"><br><p class ="ramos"> <span style="font-size: 35">8</span> &nbspTONI KROOS</p>
+</td>
+<td>
+<img src="ronaldo.jpg"><br><p class ="ramos"> <span style="font-size: 35">7</span> &nbspCRISTIANO RONALDO</p>
+</td>
+<td>
+<img src="vallejo.jpg"><br><p class ="ramos"> <span style="font-size: 35">3</span> &nbspJESUS VALLEJO</p>
+</td>
+
+</tr>
+
+<tr>
+	
+<td>
+<img src="squad2.jpg"><br><p class ="ramos"> <span style="font-size: 35">13</span> &nbspKIKO CASILLA</p>
+</td><td>
+<img src="squad8.jpg"><br><p class ="ramos"> <span style="font-size: 35">6</span> &nbspNACHO FERNANDEZ</p>
+</td><td>
+<img src="asensio.jpg"><br><p class ="ramos"> <span style="font-size: 35">20</span> &nbspMARCO ASENSIO</p>
+</td><td>
+<img src="modric.jpg"><br><p class ="ramos"> <span style="font-size: 35">10</span> &nbspLUKA MODRIC</p>
+</td>
+
+</tr>
+
+<tr>
+	<td>
+<img src="coach1.jpg"><br><p class ="ramos"> <span style="font-size: 35"></span> &nbspZINEDINE ZIDANE</p>
+</td><td>
+<img src="coach4.jpg"><br><p class ="ramos"> <span style="font-size: 35"></span> &nbspDAVID BETTONI</p>
+</td><td>
+<img src="squad5.jpg"><br><p class ="ramos"> <span style="font-size: 35"></span> &nbspLUIS LLOPIS</p>
+</td><td>
+<img src="hamidou.jpg"><br><p class ="ramos"> <span style="font-size: 35"></span> &nbspHAMIDOU MSAIDIE</p>
+</td>
+</tr>
+
+
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<html>
+
+
+
+<title>Coaches-La masia</title>
+
+<style>
+
+body{
+background-color:white;}
+
+span.header{
+font-size:40px;
+font-family:Garamond;
+}
+
+div.common{
+color:white;
+background-color:red;position:fixed;width:1400px;
+}
+
+a{
+color:black;text-decoration:none;
+
+}
+
+select{
+color:black;
+font-family:Garamond;
+background-color:red;
+}
+
+h4
+{
+	background-color: yellow;
+}
+
+</style>
+
+
+<body>
+
+<div class="common">
+
+<a href="about.html"><img src="rm.png"></a>
+
+<span class="header"><center>La-Fabrica</center></span>
+
+<table cellspacing=20px>
+
+<tr>
+
+	<th><a href="about.html">HOME</a></th>
+	<th id="the_club">THE CLUB</th>
+	<th id="members">MEMBERS</th>
+	<th><a href="fans.html">FAN CLUB</a></th>
+	<th><a href="anthem.html">ANTHEM</a></th>
+	
+
+</tr>
+
+</table>
+
+</div>
+
+
+<script>
+	flag1=1;
+	flagd1=1;
+	
+	var d=document.getElementById("the_club");
+	d.addEventListener("mouseover",tab1,false);
+	d.addEventListener("mouseout",del1,false);
+	d.addEventListener("click",tabp,false);
+	
+	function tabp()
+	{
+		tab1();
+		flagd1=0;
+	}
+	function tab1()
+	{
+		if(flag1)
+		{
+		var n=document.createElement("div");
+		n.innerHTML="<br/><a href=\"signup.html\">SIGNUP</a><br><hr><br><a href=\"squad.html\">THE SQUAD</a><br/><hr><br/><a href=\"contact.html\">CONTACTS</a><br/><hr><br/><a href=\"h1.html\">HISTORY</a>";
+		n.style.position="absolute";
+		n.style.top="135";
+		n.style.left="100";
+		n.style.backgroundColor="red";
+		n.setAttribute("id","tab1");
+		var l=document.querySelector("div.common");
+		if(l.nextSilbling)
+		{
+			var h=l.nextSibling;
+			l.parentNode.insertBefore(n,h);
+		}
+		else
+		{
+			l.parentNode.appendChild(n);
+		}
+		flag1--;
+		flagd1=1;
+	}
+	}
+	function del1()
+	{
+		if(flagd1)
+		{
+			flagsd1=0;
+			var d=document.getElementById("tab1");
+			d.parentNode.removeChild(d);
+			flag1=1;
+		}
+	}
+	flag2=1;
+	flag2d=1;
+	var e=document.getElementById("members");
+	e.addEventListener("mouseover",tab2,false);
+	e.addEventListener("mouseout",del2,false);
+	e.addEventListener("click",tab2p,false);
+	function tab2p()
+	{
+		tab2();
+		flagd2=0;
+
+	}
+	function tab2()
+	{
+		if(flag2)
+		{
+		var n=document.createElement("div");
+		n.innerHTML="<br/><a href=\"members.html\">MEMBER SERVICES</a><br/><hr><br/><a href=\"news.html\">NEWS</a></br><hr></br><a href=\"reg.html\">REGULATIONS</a>";
+		n.style.position="absolute";
+		n.style.top="135";
+		n.style.left="205";
+		n.style.backgroundColor="red";
+		n.setAttribute("id","tab2");
+		var l=document.querySelector("div.common");
+		if(l.nextSilbling)
+		{
+			var h=l.nextSibling;
+			l.parentNode.insertBefore(n,h);
+		}
+		else
+		{
+			l.parentNode.appendChild(n);
+		}
+		flag2--;
+		flagd2=1;
+	}
+	}
+	function del2()
+	{
+		if(flagd2)
+		{
+			flagsd2=0;
+			var d=document.getElementById("tab2");
+			d.parentNode.removeChild(d);
+			flag2=1;
+		}
+	}
+
+	function translate()
+	{
+		var a = document.getElementById("p");
+
+		p.innerHTML = 	"The history you've made"+"<br>"+"the history youll make!"+
+						"Because no one can resist"+"<br>"+"your willingness to win!"+
+						"The stars are now coming out!"+"<br>"+"My old Chamartin"+
+						"From far away and from nearby"+"<br>"+"you gather us all here!"+
+						"I wear your shirt"+"<br>"+"right next to my heart!"+
+						"The days you play"+"<br>"+"are everything I am!"+
+						"'The Arrow' is running!"+"<br>"+"My Madrid is attacking!"+
+						"I am struggle! I am beauty!"+"<br>"+"The cry I learned:"+
+						"Madrid! Madrid! Madrid!"+"<br>"+"Hala Madrid!"+
+						"And nothing more! And nothing more!"+"<br>"+"Hala Madrid!"
+						
+
+	}
+</script>
+
+
+
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+
+<h4 align="center">
+	<b>Hala Madrid y Nada Mas<b><br>
+	<br>
+	<br>
+
+<i>
+<p id="p">
+	Historia que tu hiciste<br>
+Historia por hacer<br>
+Porque nadie resiste<br>
+Tus ganas de vencer<br>
+<br><br>
+Ya salen las estrellas<br>
+Mi viejo Chamartin<br>
+De lejos y de cerca<br>
+Nos traes hasta aqui<br>
+<br><br>
+Llevo tu camiseta<br>
+Pegada al corazon<br>
+Los dias que tu juegas<br>
+Son todo lo que soy<br>
+<br><br>
+Ya corre la saeta<br>
+Ya ataca mi Madrid<br>
+
+Soy lucha soy belleza<br>
+El grito que aprendi<br>
+<br><br>
+Madrid Madrid Madrid<br>
+Hala madrid!<br>
+Y nada mas<br>
+Y nada mas<br>
+Hala madrid!<br>
+
+</i>
+</p>
+<br>
+
+
+<button type="button" id="button" onclick="translate()"><i>Translate</i></button>
+
+
+
+<audio autoplay="true" loop="true" volume="50">
+	<source src="halamadrid.mp3" type="audio/mpeg">
+</audio>
+</body>
+
+</html>
