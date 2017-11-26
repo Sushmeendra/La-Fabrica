@@ -1,1 +1,1 @@
-WT Project La-Fabrica is a website inspired and heavily based on Real Madrid, so disclaimer:All logos, audio, and/or other forms of media that have been used in the making of this BELONG TO REAL MADRID.
+WT Project La-Fabrica is a website inspired and heavily based on Real Madrid, so disclaimer:All logos, audio, and/or other forms of media that have been used in the making of this BELONG TO Real Madrid Clube de Futbol.
